@@ -1,4 +1,4 @@
-# Scispire
+![image info](./assets/images/logo.png)
 
 Scispire, inspiring the next generation of scientists and innovators with thousands of GPT 3.5-generated ideas.
 
