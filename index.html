@@ -277,21 +277,22 @@
     var speed = 5;
     function typeWriter(txt) {
       if (i < txt.length) {
-        if (txt.charAt(i) === "\n") {
-          document.getElementById("idea").innerHTML += "<br>";
-        } else {
-          document.getElementById("idea").innerHTML += txt.charAt(i);
-        }
+        
         i++;
         setTimeout(typeWriter(txt), speed);
       }
     }
 
-    function typeWriter(text, delay = 10) {
+    function typeWriter(text, delay = 5) {
       for (let i = 0; i < text.length; i++) {
-        setTimeout(() => {
-          document.getElementById("idea").innerHTML += text[i];
-        }, delay * i);
+        if (text.charAt(i) === "\n") {
+          setTimeout(() => {
+          document.getElementById("idea").innerHTML += "<br>"; }, delay * i);;
+        } else {
+          setTimeout(() => {
+          document.getElementById("idea").innerHTML += text[i]; }, delay * i);;
+        }
+        
       }
     }
 
