@@ -44,7 +44,7 @@
       .par {
         font-weight:600;
         color:#03409d;
-        font-size: 18px;
+        font-size: 20px;
         line-height: normal;
       }
     </style>
@@ -113,7 +113,7 @@
                     <p style="line-height:140%"><i>Inspiring the next generation of scientists and innovators with thousands of GPT-generated research ideas.</i></p>
                   </div>
                   <div class="col-lg-12">
-                    <button class="button button1" onclick ="random();">Get Ideas</button>
+                    <button class="button button1" onclick ="typeWriter();">Generate Ideas</button>
                   </div>
                 </div>
               </div>
@@ -257,11 +257,31 @@
       var titles = "";
       for (let i = 0; i < 5; i++) {
         var randomNumber = Math.floor(Math.random() * (ideas.length));
-        titles += ideas[randomNumber] + "<br><br>";
+        titles += ideas[randomNumber] + "\n\n";
       }
-      document.getElementById("idea").innerHTML = titles;
+      return titles;
     }
+
+    
+    var i = 0;
+    var speed = 25;
+    var txt = random();
+
+    function typeWriter() {
+      if (i < txt.length) {
+        if (txt.charAt(i) === "\n") {
+          document.getElementById("idea").innerHTML += "<br>";
+        } else {
+          document.getElementById("idea").innerHTML += txt.charAt(i);
+        }
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+
   </script>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
