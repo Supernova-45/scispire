@@ -23,7 +23,28 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+    <style>
+      .button1 {
+        display: inline-block !important;
+        padding: 10px 20px !important;
+        color: #fff !important;
+        text-transform: capitalize;
+        font-size: 28px;
+        background-color: #03409d;
+        border-radius: 23px;
+        font-weight: 500 !important;
+        letter-spacing: 0.3px !important;
+        transition: all .5s;
+        border: 0;
+      }
+      .par {
+        font-weight:200;
+        color:black;
+      }
+    </style>
+
   </head>
+
 
 <body>
 
@@ -82,21 +103,19 @@
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-9">
-                    <h2>Your Next Brilliant Science Project</h2>
-                    <p><i>Inspiring the next generation of scientists and innovators with original research ideas, tailored to their passions.</i></p>
+                    <h2>Your Next Science Project</h2>
+                    <p style="line-height:140%"><i>Inspiring the next generation of scientists and innovators with original research ideas, tailored to their passions.</i></p>
                   </div>
                   <div class="col-lg-12">
-                    <div class="white-button first-button scroll-to-section">
-                      <a href=""><b>Generate Ideas</b><i></i></a>
-                    </div>
+                    <button class="button button1" onclick ="random();">Get Ideas</button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6 align-self-center">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <button onclick ="random();">Get Idea</button>
-                <p id="idea" ></p>
+                <p style="color:#03409d" id="idea" ><b></b></p>
+                </div>
               </div>
             </div>
           </div>
