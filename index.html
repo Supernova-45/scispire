@@ -38,13 +38,13 @@
         border: 0;
       }
       .button1:hover {
-        background-color: #034ab5;
+        background-color: #095cd7;
         color: #fff !important;
       }
       .par {
         font-weight:600;
         color:#03409d;
-        font-size: 20px;
+        font-size: 18px;
         line-height: normal;
       }
     </style>
@@ -271,6 +271,7 @@
         var randomNumber = Math.floor(Math.random() * (ideas.length));
         titles += ideas[randomNumber] + "\n\n";
       }
+      titles.trim()
       typeWriter(titles);
     }
     var i = 0;
@@ -299,6 +300,7 @@
     function clearScreen() {
       document.getElementById("idea").innerHTML = "";
     }
+
   </script>
 
 
