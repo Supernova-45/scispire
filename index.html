@@ -113,7 +113,7 @@
                     <p style="line-height:140%"><i>Inspiring the next generation of scientists and innovators with thousands of GPT-generated research ideas.</i></p>
                   </div>
                   <div class="col-lg-12">
-                    <button class="button button1" onclick ="typeWriter();">Generate Ideas</button>
+                    <button class="button button1" onclick ="display();">Generate Ideas</button>
                   </div>
                 </div>
               </div>
@@ -155,45 +155,56 @@
         <div class="col-lg-3">
           <div class="service-item second-service">
             <div class="icon"></div>
-            <h4>Understanding the effects of ocean acidification on marine life</h4>
+            <h4>Examining the Link Between Social Media and Self-Harm
+            </h4>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item third-service">
             <div class="icon"></div>
-            <h4>Analyzing the Effects of Foreign Direct Investment on Economic Development</h4>
+            <h4>Analyzing the Role of Animal Migration in Epidemiology
+
+            </h4>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item fourth-service">
             <div class="icon"></div>
-            <h4>Examining the Effect of Social Networking Sites on Civic Engagement</h4>
+            <h4>Impact of Shifting Demographics on GDP
+            </h4>
           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <p><br></p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
           <div class="service-item first-service">
             <div class="icon"></div>
-            <h4>Investigating the role of the basal ganglia in reward processing</h4>
+            <h4>Examining the impacts of urbanization on water availability</h4>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item second-service">
             <div class="icon"></div>
-            <h4>Understanding the effects of ocean acidification on marine life</h4>
+            <h4>An Exploration of the Interaction of Fourier Analysis and Differential Equations</h4>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item third-service">
             <div class="icon"></div>
-            <h4>Analyzing the Effects of Foreign Direct Investment on Economic Development</h4>
+            <h4>Exploring the effects of pressure on the reactivity of different reaction mixtures
+            </h4>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item fourth-service">
             <div class="icon"></div>
-            <h4>Examining the Effect of Social Networking Sites on Civic Engagement</h4>
+            <h4>Investigating the Role of Endocrine Disruptors in Altering Animal Development
+            </h4>
           </div>
         </div>
       </div>
@@ -264,10 +275,9 @@
 
     
     var i = 0;
-    var speed = 25;
-    var txt = random();
+    var speed = 5;
 
-    function typeWriter() {
+    function typeWriter(txt) {
       if (i < txt.length) {
         if (txt.charAt(i) === "\n") {
           document.getElementById("idea").innerHTML += "<br>";
@@ -277,6 +287,15 @@
         i++;
         setTimeout(typeWriter, speed);
       }
+    }
+    
+    function clear() {
+      document.getElementById("idea").innerHTML += "";
+    }
+
+    function display() {
+      var txt = random();
+      typeWriter(txt);
     }
 
 
