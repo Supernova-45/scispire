@@ -10,4 +10,3 @@ print(lines)
 ideas = np.asarray(lines)
 
 generated_ideas = np.random.choice(ideas, 3)
-print(generated_ideas)
